@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+
+</head>
+
+<body>
+    <center>
+        <div class="add-form" style="display: flex;display: flex;justify-content: space-around;margin: 30px;">
+            <!-- <h2 class="addForm-head">Add</h2> -->
+
+            <label class="form-label">Nom de client</label>
+            <input type="text" class="exproduitName form-control" style="width: 200px;">
+
+            <label class="form-label">Type de produit</label>
+            <input type="text" class="exproduitType form-control" style="width: 200px;">
+
+            <label class="form-label">Prix</label>
+            <input type="text" class="exproduitPrix form-control" style="width: 200px;">
+
+            <label class="form-label">Etat</label>
+            <select>
+                <option>En attente</option>
+                <option>En cours</option>
+                <option>Termine</option>
+            </select>
+
+
+
+            <input type="submit" name="" value="Add Produit" class="submit-exproduit">
+            <input type="submit" name="" value="edit Produit" class="edit-exproduit" style="display: none;">
+            <input type="submit" name="" value="cancel edit Produit" class="cancel-exproduit" style="display: none;">
+        </div>
+    </center>
+    <table class="exproduitList  table table-striped">
+
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src='exproduitapp.js'></script>
+</body>
+
+</html>

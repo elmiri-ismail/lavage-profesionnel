@@ -1,0 +1,62 @@
+body{
+    background-color: black;
+    
+    
+}
+/*start navbar*/
+
+.navbar-brand .logo{
+    width: 49%;
+    margin-top: -62px;
+}
+
+.navbar-brand > span{
+    
+    font-size: 30px;
+}
+
+.navbar-brand span:first-child{
+    color:#43B14B;
+    font-weight:bold;
+}
+.navbar-brand span:last-child{
+    color:#fff;
+}
+.navbar-nav .nav-link{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    color:#43B14B ;
+}
+.navbar-nav .active > .nav-link{
+color:#43B14B !important;
+font-weight: bold;
+}
+/*end navbar */
+/*start slider */
+.slider{
+    background-color: rgb(195, 226, 226);
+}
+.slider .carousel-item{
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+
+.slider .carousel-one{
+    background-image: url('../img/slider1.jpg');
+    height: 100px;
+}
+
+.slider .carousel-two{
+    background-image: url('../img/slider2.jpg');
+}
+
+.slider .carousel-three{
+    background-image: url('../img/slider3.jpg');
+    
+}
+/* End slider */
+
+
