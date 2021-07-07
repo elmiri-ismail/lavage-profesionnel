@@ -242,6 +242,7 @@
   font-weight: bold;
   border: 1px solid #03a7d4;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 /* End Overview */
@@ -377,7 +378,7 @@
 }
 
 .pricing-table .card .card-link {
-  background-color: #ed1d24;
+  background-color: #03a7d4;
   font-weight: bold;
   display: inline-block;
   padding: 10px 15px;
@@ -386,6 +387,13 @@
   color: #FFF;
   font-size: 18px;
   text-transform: uppercase;
+}
+.pricing-table .card .card-link:hover{
+  background-color: #ffffff;
+  color: #03a7d4;
+  border: 1px solid #03a7d4;
+  text-transform: uppercase;
+  transition: 0.4s;
 }
 
 .pricing-table .card.corporate {
@@ -400,12 +408,18 @@
 }
 
 .pricing-table .card.corporate .card-text {
-  background-color: #ed1d24;
+  background-color: #03a7d4;
   color: #FFF
 }
 
 .pricing-table .card.corporate .card-link {
   background-color: #08526d;
+}
+.pricing-table .card.corporate .card-link:hover{
+  background-color: #FFF;
+  color: #08526d;
+  border: 1px solid #08526d;
+  transition: 0.4s;
 }
 
 /* End Pricing Table */
@@ -441,47 +455,29 @@
   display: inline-block;
   padding: 8px 20px;
   margin: 0 0 0 40px;
-  background-color: #ed1d24;
+  background-color: #03a7d4;
   color: #FFF;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
 }
-
+.choose-us .read-more:hover{
+  background-color: #fff;
+  color: #03a7d4;
+  transition: 0.4s;
+}
 /* End Choose Us */
 
-/* Start Stats */
-
-.stats {
-  padding: 100px 0;
-  color: #08526d
-}
-
-.stats .stat-box {
-  margin-bottom: 40px
-}
-
-.stats .number {
-  display: block;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.stats p {
-  color: #ed1d24;
-  font-size: 20px;
-  margin: 0
-}
-
-/* End Stats */
 
 /* Start Contact us */
 
 .contact-us {
-  padding: 80px 0;
-  background-color: #ed1d24;
+  padding: 45px 0;
+  background-color: #03a7d4;
   color: #FFF;
-  font-size: 22px
+  font-size: 22px;
+  margin-top: 54px;
+  
 }
 
 .contact-us p {
