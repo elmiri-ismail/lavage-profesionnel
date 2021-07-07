@@ -1,6 +1,9 @@
 
 
 /* Start Upper Bar */
+html {
+  scroll-behavior: smooth;
+}
 
 .upper-bar {
   background-color: #03a7d4;
