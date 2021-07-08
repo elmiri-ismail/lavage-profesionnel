@@ -9,12 +9,12 @@ $(document).ready(function () {
             method: "GET",
             success: function (data) {
                 myTable.innerHTML = `<tr>
-            <th>ID</th>
-            <th>Nom de client</th>
-            <th>Type de produit</th>
-            <th>Prix</th>
-            <th>Etat</th>
-            <th>Editing</th>
+            <th class="align-middle">ID</th>
+            <th class="align-middle"> Nom de client</th>
+            <th class="align-middle">Type de véhicule</th>
+            <th class="align-middle">Prix</th>
+            <th class="align-middle">Etat</th>
+            <th class="align-middle">Editing</th>
             </tr>`
                 console.log(data);
                 exproduitList = JSON.parse(data);
@@ -28,7 +28,7 @@ $(document).ready(function () {
                 <select etat='${exproduitList[i]["etat"]}' class="select2">
                 <option>en_attente</option>
                 <option>en_cours</option>
-                <option>termine</option>
+                <option>terminé</option>
                 </select>
                 </td>
                 <td><span class="btn bg-info edit" >update</span><span class="btn bg-danger delete">delete</span></td>

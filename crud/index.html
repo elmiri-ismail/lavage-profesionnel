@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <center>
-        <div class="add-form" style="display: flex;display: flex;justify-content: space-around;margin: 30px;">
+    
+        <div class="add-form" style="display: flex;display: flex;justify-content: space-around; flex-wrap:wrap; margin: 30px;">
             <!-- <h2 class="addForm-head">Add</h2> -->
 
             <label class="form-label">Nom de client</label>
             <input type="text" class="exproduitName form-control" style="width: 200px;">
 
-            <label class="form-label">Type de produit</label>
+            <label class="form-label">Type de véhicule</label>
             <input type="text" class="exproduitType form-control" style="width: 200px;">
 
             <label class="form-label">Prix</label>
@@ -32,7 +32,8 @@
                 <option>En cours</option>
                 <option>Termine</option>
             </select>
-
+            
+            
 
 
             <input type="submit" name="" value="Add Produit" class="submit-exproduit">
@@ -40,7 +41,7 @@
             <input type="submit" name="" value="cancel edit Produit" class="cancel-exproduit" style="display: none;">
         </div>
     </center>
-    <table class="exproduitList  table table-striped">
+    <table class="exproduitList  table table-striped table-hover">
 
     </table>
 

@@ -11,7 +11,7 @@ $(document).ready(function () {
                 myTable.innerHTML = `<tr>
             <th>ID</th>
             <th>Nom de client</th>
-            <th>Type de produit</th>
+            <th>Type de véhicule</th>
             <th>Prix</th>
             <th>Etat</th>
             </tr>`
