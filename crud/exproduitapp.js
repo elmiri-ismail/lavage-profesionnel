@@ -25,7 +25,7 @@ $(document).ready(function () {
                 <td>${exproduitList[i]["type"]}</td>
                 <td>${exproduitList[i]["prix"]}</td>
                 <td>
-                <select id=${i.toString()} class="select2">
+                <select etat='${exproduitList[i]["etat"]}' class="select2">
                 <option>en_attente</option>
                 <option>en_cours</option>
                 <option>termine</option>
@@ -34,11 +34,15 @@ $(document).ready(function () {
                 <td><span class="btn bg-info edit" >update</span><span class="btn bg-danger delete">delete</span></td>
                 </tr>`;
 
-                    document.getElementById(i.toString()).value = exproduitList[i]["etat"]
-                    console.log(exproduitList[i]["etat"])
-                    console.log(document.getElementById(i.toString()))
 
+                    // document.getElementById(i.toString()).value = exproduitList[i]["etat"]
+                    // console.log(exproduitList[i]["etat"])
+                    // console.log(document.getElementById(i.toString()))
                 }
+
+                document.querySelectorAll('.select2').forEach(el => {
+                    el.value = el.getAttribute('etat')
+                })
 
                 delet()
                 edit()
@@ -52,7 +56,7 @@ $(document).ready(function () {
     function changeEtat() {
 
         document.querySelectorAll('.select2').forEach(element => {
-            element.onchange = (e) => {
+            element.addEventListener('change', (e) => {
 
 
                 let deletedE = e.target;
@@ -93,7 +97,7 @@ $(document).ready(function () {
 
                 })
 
-            }
+            })
         });
 
     }

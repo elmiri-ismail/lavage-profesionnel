@@ -229,7 +229,7 @@ html {
   margin-bottom: 40px;
 }
 
-.overview button {
+.overview a {
   background-color: #03a7d4;
   color: #FFF;
   padding: 10px 30px;
@@ -237,7 +237,7 @@ html {
   font-weight: bold;
   border: 1px solid #03a7d4;
 }
-.overview button:hover{
+.overview a:hover{
   background-color: white;
   color: #03a7d4;
   padding: 10px 30px;
@@ -246,6 +246,7 @@ html {
   border: 1px solid #03a7d4;
   cursor: pointer;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 /* End Overview */
@@ -515,12 +516,13 @@ html {
 }
 
 .footer .site-info h2 span:first-child {
-  color: #08526d;
+  color: #03a7d4;
   font-weight: bold;
+  
 }
 
 .footer .site-info h2 span:last-child {
-  color: #ec1c23;
+  color: black;
 }
 
 .footer .site-info p {
@@ -598,3 +600,21 @@ html {
 }
 
 /* End Copyright */
+.collapse ul li .btn-commencer{
+  background-color: #03a7d4;
+  color: white !important;
+  padding: 10px 30px;
+  font-size: 15px;
+  border: 1px solid #03a7d4;
+  text-decoration: none;
+}
+.collapse ul li .btn-commencer:hover{
+  background-color: white;
+  color: #03a7d4 !important;
+  
+ 
+  border: 1px solid #03a7d4;
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+}
