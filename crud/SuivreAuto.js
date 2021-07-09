@@ -5,7 +5,7 @@ $(document).ready(function () {
     function getall() {
         myTable.innerHTML = "";
         $.ajax({
-            url: "crud/api/getExtincteur.php",
+            url: "crud/api/suivre.php",
             method: "GET",
             success: function (data) {
                 myTable.innerHTML = `<tr>

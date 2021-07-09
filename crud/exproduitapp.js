@@ -8,6 +8,9 @@ $(document).ready(function () {
             url: "api/getExtincteur.php",
             method: "GET",
             success: function (data) {
+                if (data == "false") {
+                    window.location.href = "../login/index.html";
+                }
                 myTable.innerHTML = `<tr>
             <th class="align-middle">ID</th>
             <th class="align-middle"> Nom de client</th>
@@ -88,6 +91,9 @@ $(document).ready(function () {
                     },
                     datatype: JSON,
                     success: (data) => {
+                        if (data == "false") {
+                            window.location.href = "../login/index.html";
+                        }
                         console.log(data)
                         // document.querySelector('.exproduitName').value = ""
                         // document.querySelector('.exproduitType').value = ""
@@ -133,6 +139,9 @@ $(document).ready(function () {
             },
             datatype: JSON,
             success: (data) => {
+                if (data == "false") {
+                    window.location.href = "../login/index.html";
+                }
                 console.log(data)
                 document.querySelector('.exproduitName').value = ""
                 document.querySelector('.exproduitType').value = ""
@@ -165,6 +174,9 @@ $(document).ready(function () {
                     },
                     datatype: JSON,
                     success: (data) => {
+                        if (data == "false") {
+                            window.location.href = "../login/index.html";
+                        }
                         console.log(data)
                         getall()
                     }
@@ -267,6 +279,9 @@ $(document).ready(function () {
                         },
                         datatype: JSON,
                         success: (data) => {
+                            if (data == "false") {
+                                window.location.href = "../login/index.html";
+                            }
                             console.log(data)
 
                             document.querySelector('.exproduitName').value = ""
@@ -321,4 +336,22 @@ $(document).ready(function () {
 
 
 
+})
+
+
+document.getElementById('deconnect').addEventListener('click', () => {
+    console.log('woow')
+    $.ajax({
+        url: '../login/api/deconnect.php',
+        type: 'post',
+        data: {
+            deconnect: true
+        },
+        success: (data) => {
+            console.log(data)
+            if (data == 'deconnected') {
+                window.location.href = "../login/index.html";
+            }
+        }
+    })
 })
