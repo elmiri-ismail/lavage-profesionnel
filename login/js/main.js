@@ -18,6 +18,14 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+function myFunction() {
+	var x = document.getElementById("password");
+	if (x.type === "password") {
+	  x.type = "text";
+	} else {
+	  x.type = "password";
+	}
+  }
 
 
 // document.getElementById('loginForm').addEventListener('submit', (e) => {
