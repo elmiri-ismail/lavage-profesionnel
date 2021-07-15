@@ -120,27 +120,27 @@ class CrudProduct extends React.Component {
 
                                     <div className="form-row">
                                         <div className="col-12">
-                                            <label htmlFor="inputName4">Nom</label>
+                                            <label htmlFor="inputName4">Nom de client</label>
                                             <input type="text" className="form-control Firstname" id="Firstname" placeholder="First name" />
                                         </div>
                                     </div>
                                     <div className="form-row">
                                         <div className="col-12">
-                                            <label htmlFor="inputLast4">Last Name</label>
+                                            <label htmlFor="inputLast4">Matricule</label>
                                             <input type="text" className="form-control Lastname" id="Lastname" placeholder="Last name" />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-12">
-                                            <label htmlFor="inputMatricule4">Matricule</label>
+                                            <label htmlFor="inputMatricule4">Prix</label>
                                             <input type="number" className="form-control Matricule" id="Matricule" placeholder="Matricule" />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-12">
-                                            <label htmlFor="inputEmail4">Email</label>
+                                            <label htmlFor="inputEmail4">Etat</label>
                                             <input type="email" className="form-control Email" id="Email" placeholder="Email" />
                                         </div>
                                     </div>
@@ -161,10 +161,10 @@ class CrudProduct extends React.Component {
                 <table className="table table-hover">
                     <thead className="thead">
                         <tr>
-                            <th scope="col">Firstname</th>
-                            <th scope="col">Lastname</th>
+                            <th scope="col">Nom de client</th>
                             <th scope="col">Matricule</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Etat</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
 
