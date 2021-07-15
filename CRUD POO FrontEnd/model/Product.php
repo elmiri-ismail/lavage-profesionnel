@@ -5,17 +5,17 @@ class Product implements JsonSerializable {
     {
         return array(
 			 'id' => $this->_id,
-             'Firstname' => $this->_Firstname,
-             'Lastname' => $this->_Lastname,
-             'Matricule' => $this->_Matricule,
-             'Email' => $this->_Email,
+             'titre' => $this->_titre,
+             'type' => $this->_type,
+             'prix' => $this->_prix,
+             'etat' => $this->_etat,
         );
     }
 	private $_id;
-	private $_Firstname;
-	private $_Lastname;
-	private $_Matricule;
-	private $_Email;
+	private $_titre;
+	private $_type;
+	private $_prix;
+	private $_etat;
 	
 	public function __construct() {
 	
@@ -24,30 +24,30 @@ class Product implements JsonSerializable {
 	// 	$this->fill($data);
 	// }
 		public function getId() { return $this->_id; }
-		public function getName() { return $this->_Firstname; }
-		public function getLast() { return $this->_Lastname; }
-		public function getMatricule() { return $this->_Matricule; }
-		public function getEmail() { return $this->_Email; }
+		public function getTitre() { return $this->_titre; }
+		public function getType() { return $this->_type; }
+		public function getPrix() { return $this->_prix; }
+		public function getEtat() { return $this->_etat; }
 
 
 		public function setId($id){
 			$this->_id = (int) $id;
 		}
 
-		public function setFirst($Firstname){	
-					$this->_Firstname = $Firstname;
+		public function setTitre($titre){	
+					$this->_titre = $titre;
 			
 		}
-		public function setLast($Lastname){
-					$this->_Lastname = $Lastname;
+		public function setType($type){
+					$this->_type = $type;
 		}
 
-		public function setMatricule($Matricule){
-				$this->_Matricule = $Matricule;
+		public function setPrix($prix){
+				$this->_prix = $prix;
 		}
 
-		public function setEmail($Email){
-					$this->_Email = $Email;
+		public function setEtat($etat){
+					$this->_etat = $etat;
 		}
 
 }

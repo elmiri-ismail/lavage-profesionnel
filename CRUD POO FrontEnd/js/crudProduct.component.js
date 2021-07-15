@@ -30,10 +30,10 @@ class CrudProduct extends React.Component {
             url: "/api/addProduct.php",
             method: "POST",
             data: {
-                Firstname: Firstname.value,
-                Lastname: Lastname.value,
-                Matricule: Matricule.value,
-                Email: Email.value,
+                titre: ajoutertitre.value,
+                type: ajoutertype.value,
+                prix: ajouterprix.value,
+                etat: ajouteretat.value,
             },
             success: function (data) {
                 this.chargementDonnees()
@@ -64,7 +64,7 @@ class CrudProduct extends React.Component {
             url: "api/updateProduct.php",
             method: "POST",
             data: {
-                id : i,
+                id: i,
                 Firstname: Firstname.value,
                 Lastname: Lastname.value,
                 Matricule: Matricule.value,
@@ -94,7 +94,7 @@ class CrudProduct extends React.Component {
                     key={product.id}
                     product={product}
                     onClickClose={this.removeproduct.bind(this, product.id)}
-                    onClickUpdate= {this.updateproduct.bind(this,product.id)}
+                    onClickUpdate={this.updateproduct.bind(this, product.id)}
                 />
             )
         })
@@ -106,7 +106,7 @@ class CrudProduct extends React.Component {
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalCenterTitle">Ajouter Ouvrier</h5>
+                                <h5 className="modal-title" id="exampleModalCenterTitle">Ajouter Voiture</h5>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
@@ -121,34 +121,34 @@ class CrudProduct extends React.Component {
                                     <div className="form-row">
                                         <div className="col-12">
                                             <label htmlFor="inputName4">Nom de client</label>
-                                            <input type="text" className="form-control Firstname" id="Firstname" placeholder="First name" />
+                                            <input type="text" className="form-control Firstname" id="ajoutertitre" placeholder="Nom complet" />
                                         </div>
                                     </div>
                                     <div className="form-row">
                                         <div className="col-12">
                                             <label htmlFor="inputLast4">Matricule</label>
-                                            <input type="text" className="form-control Lastname" id="Lastname" placeholder="Last name" />
+                                            <input type="text" className="form-control Lastname" id="ajoutertype" placeholder="Matricule" />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-12">
                                             <label htmlFor="inputMatricule4">Prix</label>
-                                            <input type="number" className="form-control Matricule" id="Matricule" placeholder="Matricule" />
+                                            <input type="number" className="form-control Matricule" id="ajouterprix" placeholder="Prix" />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-12">
                                             <label htmlFor="inputEmail4">Etat</label>
-                                            <input type="email" className="form-control Email" id="Email" placeholder="Email" />
+                                            <input type="text" className="form-control Email" id="ajouteretat" placeholder="etat" />
                                         </div>
                                     </div>
 
                                     <div className="input-group text-right">
                                         <div className="input-group-btn">
-                                        <button type="submit" className="btn btn-primary submit ">AJOUTER OUVRIER</button>
- 
+                                            <button type="submit" className="btn btn-primary submit ">AJOUTER VOITURE</button>
+
                                         </div>
                                     </div>
                                 </form>

@@ -31,7 +31,7 @@ class SideBar extends React.Component {
                   <li className="nav-item">
                     <a href="ouvriers.html" className="nav-link">
                       <i className="nav-icon fas fa-tachometer-alt" />
-                      <p>Ouvriers</p>
+                      <p>Les véhicules</p>
                     </a>
                   </li>
                 </ul>

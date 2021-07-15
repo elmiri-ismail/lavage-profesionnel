@@ -11,10 +11,10 @@ class productsManager {
 		foreach ($result as $row){
 			$item = new Product();
 			$item->setId($row["id"]);
-			$item->setFirst($row["titre"]);
-			$item->setLast($row["type"]);
-			$item->setMatricule($row["prix"]);
-			$item->setEmail($row["etat"]);
+			$item->setTitre($row["titre"]);
+			$item->setType($row["type"]);
+			$item->setPrix($row["prix"]);
+			$item->setEtat($row["etat"]);
 			array_push($stack, $item);
 		}
 		return $stack;
@@ -23,14 +23,14 @@ class productsManager {
 //Add Product
 		public function add($product){
 			$dbh = new PDO("mysql:host=localhost;dbname=tableaux","root","Miriismail2002");
-			$req = "INSERT INTO `exproduit`(`id`,`Firstname`, `Lastname`,`Matricule`,`Email`) VALUES (:id,:Firstname,:Lastname,:Matricule,:Email)";
+			$req = "INSERT INTO `exproduit`(`id`,`titre`, `type`,`prix`,`etat`) VALUES (:id,:titre,:type,:prix,:etat)";
 
 			$updateProductQuery = $dbh ->prepare($req);
 			$updateProductQuery -> bindParam(":id",$product->getId(),PDO::PARAM_STR);	
-			$updateProductQuery -> bindParam(":titre",$product->getName(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":type",$product->getLast(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":prix",$product->getMatricule(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":etat",$product->getEmail(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":titre",$product->getTitre(),PDO::PARAM_STR);
+            $updateProductQuery -> bindParam(":type",$product->getType(),PDO::PARAM_STR);
+            $updateProductQuery -> bindParam(":prix",$product->getPrix(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":etat",$product->getEtat(),PDO::PARAM_STR);
 			$updateProductQuery->execute();
         }
 		// delete product
@@ -48,7 +48,7 @@ class productsManager {
 			$dbh = new PDO("mysql:host=localhost;dbname=tableaux","root","Miriismail2002");
 			$req = "UPDATE exproduit SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
 			$updateProductQuery = $dbh ->prepare($req);
-			$updateProductQuery -> bindParam(":Firstname",$product->getName(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":Firstname",$product->getT(),PDO::PARAM_STR);
             $updateProductQuery -> bindParam(":Lastname",$product->getLast(),PDO::PARAM_STR);
             $updateProductQuery -> bindParam(":Matricule",$product->getMatricule(),PDO::PARAM_STR);
             $updateProductQuery -> bindParam(":Email",$product->getEmail(),PDO::PARAM_STR);
