@@ -27,7 +27,7 @@ class CrudProduct extends React.Component {
     //add product
     addproduct(e) {
         $.ajax({
-            url: "/api/addProduct.php",
+            url: "http://localhost:8080/login/api/crud/api/addProduct.php",
             method: "POST",
             data: {
                 titre: ajoutertitre.value,
@@ -46,7 +46,7 @@ class CrudProduct extends React.Component {
     // Remove product
     removeproduct(i) {
         $.ajax({
-            url: "/api/deleteProduct.php",
+            url: "http://localhost:8080/login/api/crud/api/deleteProduct.php",
             method: "POST",
             data: {
                 id: i
@@ -61,11 +61,11 @@ class CrudProduct extends React.Component {
     //update product
     updateproduct(i) {
         $.ajax({
-            url: "api/updateProduct.php",
+            url: "http://localhost:8080/login/api/crud/api/updateProduct.php",
             method: "POST",
             data: {
                 id: i,
-                Firstname: Firstname.value,
+                titre: Firstname.value,
                 Lastname: Lastname.value,
                 Matricule: Matricule.value,
                 Email: Email.value,

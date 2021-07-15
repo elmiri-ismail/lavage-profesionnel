@@ -20,7 +20,7 @@ class Menu extends React.Component {
                   <a href="#" className="d-block">&#124; &nbsp;&nbsp;&nbsp;&nbsp;El miri Ismail</a>
                 </div>
                 <div className="image">
-                  <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+                  <img src="dist/img/ismail.jpg" className="img-circle elevation-2" alt="User Image" />
                 </div>
 
               </div>

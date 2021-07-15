@@ -17,7 +17,7 @@ $result = mysqli_query($connect,$sql);
 if(mysqli_num_rows($result) == 1){
   session_start();
   $_SESSION['login'] = "loginTrue";
-  header("location:../../crud/index.html");
+  header("location:crud/index.html");
 }else{
   header("location:../");
 }
