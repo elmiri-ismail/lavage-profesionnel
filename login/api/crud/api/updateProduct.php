@@ -3,10 +3,10 @@ require_once '../manager/productsManager.php';
 
 $product = new Product;
 $product->setId($_POST["id"]);
-$product->setFirst($_POST["Firstname"]);
-$product->setLast($_POST["Lastname"]);
-$product->setMatricule($_POST["Matricule"]);
-$product->setEmail($_POST["Email"]);
+$product->setTitre($_POST["titre"]);
+$product->setType($_POST["type"]);
+$product->setPrix($_POST["prix"]);
+$product->setEtat($_POST["etat"]);
 
 $updateProductsManager = null;
 $updateProductManager =  new productsManager(); 

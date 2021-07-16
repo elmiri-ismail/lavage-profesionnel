@@ -30,6 +30,7 @@ class App extends React.Component {
             <div className="card">
               <div className="card-header row">
                 <h3 className="card-title col-6">Les véhicules</h3>
+                
                 <div className="col-6 text-right">
                     <button type="button" className="btn btn-primary add-btn" data-toggle="modal" data-target="#exampleModalCenter" id="addnewbtn">AJOUTER</button>
                 </div>
@@ -39,7 +40,7 @@ class App extends React.Component {
               </div>
               {/* /.card-body */}
               <div className="card-footer">
-                Footer
+                
               </div>
               {/* /.card-footer*/}
             </div>
@@ -48,11 +49,13 @@ class App extends React.Component {
           {/* /.content */}
         </div>
         {/* /.content-wrapper */}
+        
         <footer className="main-footer">
           <div className="float-right d-none d-sm-block">
-            <b>Version</b> 3.1.0
+          <a class="dec btn bg-primary" href="../../index.html">Deconnexion</a>
           </div>
-          <strong>Copyright © 2020-2021 <a href="https://solicode.co">CarWash</a>.</strong> All rights reserved.
+       
+          <strong>Copyright © 2020-2021 <a href="../../../index.html">CarWash</a>.</strong> All rights reserved.
         </footer>
         {/* Control Sidebar */}
         <aside className="control-sidebar control-sidebar-dark">

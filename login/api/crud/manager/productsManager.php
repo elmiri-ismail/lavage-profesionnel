@@ -46,12 +46,13 @@ class productsManager {
 		public function update($product){
 			$id = $product->getId();
 			$dbh = new PDO("mysql:host=localhost;dbname=tableaux","root","Miriismail2002");
-			$req = "UPDATE exproduit SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
+			$req = "UPDATE exproduit SET titre = :titre,type = :type,prix = :prix,etat = :etat WHERE id = $id";
 			$updateProductQuery = $dbh ->prepare($req);
-			$updateProductQuery -> bindParam(":Firstname",$product->getT(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Lastname",$product->getLast(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Matricule",$product->getMatricule(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Email",$product->getEmail(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":id",$product->getId(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":titre",$product->getTitre(),PDO::PARAM_STR);
+            $updateProductQuery -> bindParam(":type",$product->getType(),PDO::PARAM_STR);
+            $updateProductQuery -> bindParam(":prix",$product->getPrix(),PDO::PARAM_STR);
+            $updateProductQuery -> bindParam(":etat",$product->getEtat(),PDO::PARAM_STR);
 			$updateProductQuery->execute();
         }
 }
